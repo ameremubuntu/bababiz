@@ -1,0 +1,16 @@
+source :rubygems
+
+group :test do
+  gem 'hpricot'
+  gem 'pony'
+  gem 'parallel'
+  gem 'spinach'
+  gem 'capybara'
+  gem 'rspec'
+  gem 'capybara-webkit'
+  gem 'spinach-rails'
+  gem 'rake'
+  gem 'headless'
+  gem 'selenium-webdriver', '2.38.0'
+  gem 'show_me_the_cookies'
+end

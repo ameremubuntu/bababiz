@@ -1,0 +1,18 @@
+require 'rake'
+require 'parallel'
+
+ENV['capybara_apphost'] = ENV['apphost'] || ENV['capybara_apphost'] = "http://www.ebay.com"
+Dir.glob("**/lib/tasks.*").each { |d| import d }
+
+
+desc "Create new test folder with basic framework and example"
+task :newtest, :dir do |t,arg|
+  puts "Creating new project under directory #{arg[:dir]}..."
+  FileUtils.mkdir_p(arg[:dir] + "/lib")
+  FileUtils.mkdir_p(arg[:dir] + "/features/support")
+  FileUtils.ln_s("../../../master/features/support/env.rb","#{arg[:dir]}/features/support/env.rb")
+  FileUtils.ln_s("../../master/lib/tasks.rake","#{arg[:dir]}/lib/tasks.rake")
+  File.open(arg[:dir] + "/features/example.feature", "w") { |f| f.write("Feature: Test\n  Scenario: testing\n    Given I do stuff\n    Then I should see blah") }
+  Dir.chdir(arg[:dir])
+  exec "bundle exec spinach -g"
+end

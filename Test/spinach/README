@@ -1,0 +1,46 @@
+== Requirements ==
+------------------
+
+---- Mac OS X ----
+Mac OS X with xcode and gcc 4.2 (you may need to install a package for this)
+Homebrew
+rvm
+ruby 1.9.3p0
+bundler
+Use homebrew to install:
+* chromedriver
+* qt4
+
+---- Linux(Ubuntu is best) ----
+Qt 4.7
+xvfb support (linux/mac only as far as this author knows.  only applicable to webkit)
+imagemagick (for screenshots)
+rvm
+ruby 1.9.3
+bundler
+compiler toolchain (gcc, gcc-c++, make, autoconf, etc)
+working shell (bash, mostly)
+
+=== How to use ===
+All commands are run through rake
+
+To create a new test:
+rake newtest[testname]
+
+The following command will run the [feature_name] feature tests using webkit (headless mode):
+rake [feature_name]:webkit ==> example: rake test:webkit
+
+The following command will run the [feature_name] tests using firefox on the local system:
+rake [feature_name]:selenium  ==> example: rake test:selenium
+
+The following command will run the [feature_name] tests using chrome on the local system:
+rake [feature_name]:selenium browser=chrome ==> example: rake test:selenium browser=chrome
+
+The following command will run the [feature_name] test against something other than the production/live site:
+rake [feature_name]:webkit apphost="http://admin-dev.streetline.com/"
+        ==> example: rake test:webkit apphost="http://admin-dev.streetline.com/"
+        ==> example: rake test:selenium apphost="http://admin-dev.streetline.com/"
+        
+        
+The following command will run single test case: rake <project_name>:single[<feature_name>.feature,selenium]
+        ==> example: rake sa:single[applications.feature,selenium]

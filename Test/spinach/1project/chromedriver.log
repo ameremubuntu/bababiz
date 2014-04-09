@@ -1,0 +1,53 @@
+[0.051][INFO]:      ChromeDriver 26.0.1383.0 /usr/local/bin/chromedriver
+[0.134][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chrome.detach": true,
+   "chromeOptions": {
+      "detach": true
+   },
+   "cssSelectorsEnabled": true,
+   "javascriptEnabled": true,
+   "nativeEvents": false,
+   "platform": "ANY",
+   "rotatable": false,
+   "takesScreenshot": false,
+   "version": ""
+}
+
+[0.140][INFO]:      Using named testing interface
+[1.059][INFO]:      Connected to Chrome successfully. Version: 31.0.1650.63
+[1.087][FINE]:      Command received (/session/747d075e34c788bd3e964f81838978b5)
+[1.087][FINE]:      Command finished (/session/747d075e34c788bd3e964f81838978b5) with response {
+   "sessionId": "747d075e34c788bd3e964f81838978b5",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "26.0.1383.0",
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "mac",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "31.0.1650.63",
+      "webStorageEnabled": true
+   }
+}
+
+[1.089][FINE]:      Command received (/session/747d075e34c788bd3e964f81838978b5/url) with params {
+   "url": "http://Aleks:Abcd1234@admin-dev-plat.streetline.com/"
+}
+
+[1.089][FINER]:     Waiting for all views to stop loading...
+[1.089][FINER]:     Done waiting for all views to stop loading
+[1.090][FINE]:      Command received (/session/747d075e34c788bd3e964f81838978b5/screenshot)
+[1.090][FINER]:     Waiting for all views to stop loading...
+[1.091][FINER]:     Done waiting for all views to stop loading
+[1.092][FINE]:      Command received (/session/747d075e34c788bd3e964f81838978b5)
+[1.129][INFO]:      Chrome shutdown
